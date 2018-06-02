@@ -1,6 +1,6 @@
 <%-- 
     Document   : checklogin
-    Created on : Jun 2, 2018, 5:57:13 PM
+    Created on : Jun 2, 2018, 6:36:45 PM
     Author     : Lenovo
 --%>
 
@@ -13,12 +13,16 @@
             String pass = request.getParameter("upass");
 
             try {
+                
+                Class.forName("com.mysql.jdbc.Driver");
 
-                Class.forName("oracle.jdbc.driver.OracleDriver");
+               Connection con = DriverManager.getConnection("jdbc:mysql://localhost/reg", "root", "");
 
-                Connection con = DriverManager.getConnection("jdbc:oracle:thin:@mcndesktop07:1521:XE", "sandeep", "welcome");
+              //  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@mcndesktop07:1521:XE", "sandeep", "welcome");
+             
+              
 
-                Statement st = con.createStatement();
+               Statement st = con.createStatement();
 
                 ResultSet rs = st.executeQuery("select * from reg");
 
