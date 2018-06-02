@@ -18,7 +18,7 @@
 
                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/reg", "root", "");
 
-              //  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@mcndesktop07:1521:XE", "sandeep", "welcome");
+              //
              
               
 
